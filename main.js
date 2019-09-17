@@ -36,9 +36,6 @@ if (location.hash.length > 0) {
 }
 renderState();
 
-}
-
-
 //State Functions
 function renderState() {
     switch (state) {
