@@ -34,6 +34,7 @@ if (location.hash.length > 0) {
     state = 0;
 
 }
+// set page rendering
 renderState();
 
 //State Functions
@@ -75,11 +76,12 @@ function renderState() {
 
             // create new array with no yourSym
             var newSym = []
-            for (var i = 0; i < rng; i++){
-                newSym.Push(symbols[i]) 
+            for (var i = 0; i < 8; i++){
+                if (i < rng){
+                    newSym.Push(symbols[i]) 
 
-            } else if (rng < i < 10){
-                newSym.Push(symbols[i])
+                } else if (rng < i){
+                    newSym.Push(symbols[i])
             }
             
             // add 1 more new sym to make array 10 elements long
