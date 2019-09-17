@@ -22,8 +22,8 @@ nextButton.addEventListener('click', changeState);
 resetButton.addEventListener('click', resetState);
 
 // initialize button visibilities
-startButton.style.visibility = 'visible'
-nextButton.style.visibility = 'hidden'
+startButton.style.display = 'block'
+nextButton.style.display = 'none'
 resetButton.style.visibility = 'hidden'
 
 // back/forward browser button integration
