@@ -1,4 +1,4 @@
-// index intitalizaiton
+// index initialization
 var i = 0
 
 // making every button a js object
