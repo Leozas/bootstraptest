@@ -10,7 +10,7 @@ var resetButton = document.querySelector('resetButton');
 var mainText = document.querySelector('mainText');
 var subText = document.querySelector('subText');
 
-// intialize state to 0
+// initialize state to 0
 var state = 0;
 
 // symbols 0-9 (1-10)
@@ -104,8 +104,9 @@ function renderState() {
                 mainText.innerHTML = "Your symbol is: ... " + yourSym
                 subText.innerHTML = "Thanks for playing! Click the reset button to play again!" ;
                 nextButton.style.visibility = "hidden";
-            break;
-            
+                break;
+            }
+    }
 function resetState() {
     state = 0;
     location.hash = state;
