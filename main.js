@@ -22,9 +22,9 @@ nextButton.addEventListener('click', changeState);
 resetButton.addEventListener('click', resetState);
 
 // initialize button visibilities
-startButton.style.display = 'block'
-nextButton.style.display = 'none'
-resetButton.style.visibility = 'hidden'
+startButton.style.display = 'block';
+nextButton.style.display = 'none';
+resetButton.style.visibility = 'hidden';
 
 // back/forward browser button integration
 if (location.hash.length > 0) {
@@ -43,7 +43,7 @@ function renderState() {
         case '0': 
             mainText.textContent = "I can read your mind";
             subText.textContent = "Click Start to see it happen!";
-            startButton.style.visibility = 'Visible'
+            startButton.style.visibility = 'Visible';
             nextButton.style.visibility = 'hidden';
             resetButton.style.visibility = 'hidden';
             break;
@@ -51,9 +51,9 @@ function renderState() {
         case '1': 
             mainText.textContent = "Pick a number between 0-99";
             subText.textContent = "When you have picked your number, click Next";
-            startButton.style.visibility = 'hidden'
-            nextButton.style.visibility = 'visible'
-            resetButton.style.visibility = 'visible'
+            startButton.style.visibility = 'hidden';
+            nextButton.style.visibility = 'visible';
+            resetButton.style.visibility = 'visible';
             break;
 
         case '2':
@@ -68,20 +68,21 @@ function renderState() {
         case '4':
             mainText.innerHTML = "";
             // reset symbols array
-            var symbols = ['!','@','#','$','%','^','&','*','~','?']
+            var symbols = ['!','@','#','$','%','^','&','*','~','?'];
 
             // randomize the users symbol
-            var rng = Math.floor(Math.random() * 10)
-            var yourSym = sym[rng]
+            var rng = Math.floor(Math.random() * 10);
+            var yourSym = sym[rng];
 
             // create new array with no yourSym
-            var newSym = []
+            var newSym = [];
             for (var i = 0; i < 8; i++){
                 if (i < rng){
                     newSym.Push(symbols[i]) 
 
                 } else if (rng < i){
                     newSym.Push(symbols[i])
+                }
             }
             
             // add 1 more new sym to make array 10 elements long
@@ -102,10 +103,11 @@ function renderState() {
 
         case '5':
                 mainText.innerHTML = "Your symbol is: ... " + yourSym
-                subText.innerHTML = "Thanks for playing! Click the reset button to play again!" ;
+                subText.innerHTML = "Thanks for playing! Click the reset button to play again!";
                 nextButton.style.visibility = "hidden";
                 break;
             }
+            
     }
 function resetState() {
     state = 0;
